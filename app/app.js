@@ -11,6 +11,10 @@ function initListeners() {
 
     let classesarray = cl.split(",");
 
+    var filtered = classesarray.filter(function (value, index, arr) {
+      return value !== "";
+    });
+
     if (
       fn != "" &&
       ln != "" &&
@@ -25,7 +29,7 @@ function initListeners() {
         age: bd,
         email: em,
         phone: ph,
-        classes: classesarray,
+        classes: filtered,
       };
 
       console.log(allUsers);
@@ -58,16 +62,18 @@ function initListeners() {
     $.each(allUsers, function (idx, user) {
       console.log(user.fname);
       console.log(user.lname);
-      $("#app").append(
-        `<h3 class="person-label">Person ${idx + 1}</h3><p>Name: ${
-          user.fname
-        } ${user.lname}</p> <p>Age: ${user.age}</p> <p>Email: ${
-          user.email
-        }</p> <p>Phone Number: ${user.phone}</p><p>Classes: </p>`
-      );
+      let personstring = `<div class="person-info"><h3 class="person-label">Person ${
+        idx + 1
+      }</h3><p>Name: ${user.fname} ${user.lname}</p> <p>Age: ${
+        user.age
+      }</p> <p>Email: ${user.email}</p> <p>Phone Number: ${
+        user.phone
+      }</p><p class="class-list">Classes: </p>`;
       $.each(user.classes, function (idx, classsingular) {
-        $("#app").append(`<li class="indclass">${classsingular}</li>`);
+        personstring += `<li class="indclass">${classsingular}</li>`;
       });
+      personstring += `</div>`;
+      $("#app").append(personstring);
     });
   });
 }
