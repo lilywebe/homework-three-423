@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="flex-form-output">
+      <div class="form">
+        <label for="fname">First Name</label>
+        <input id="fname" type="text" />
+        <label for="lname">Last Name</label>
+        <input id="lname" type="text" />
+        <label for="age">Age</label>
+        <input id="age" type="text" />
+        <label for="email">Email Address</label>
+        <input id="email" type="email" />
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" />
+        <label for="classes">Classes (separated by a comma)</label>
+        <input id="classes" type="text" />
+        <input id="submit" type="submit" value="Submit" />
+
+        <button id="getName">Get All Names</button>
+      </div>
+
+      <div id="app"></div>
+    </div>
+
+    <script src="lib/jquery-3.6.1.min.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+</html>

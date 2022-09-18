@@ -1,0 +1,39 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html, body {
+ height: 100%;
+ padding:50px;
+}
+h1, h2, h3, h4, h5, h6, p {
+ margin-bottom: 16px
+}
+
+label, input{
+    display:block;
+}
+input{
+    margin:20px;
+}
+button{
+    margin-bottom:20px;
+
+}
+
+#submit{
+    margin:20px;
+
+}
+
+.flex-form-output{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.person-label{
+    margin-top: 50px;
+}
